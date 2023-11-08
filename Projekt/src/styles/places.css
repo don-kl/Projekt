@@ -1,0 +1,187 @@
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #212029;
+}
+
+#container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  height: 100%;
+}
+
+#map {
+  grid-column: 2/-1;
+  width: 100%;
+}
+
+li {
+  list-style: none;
+}
+
+#side {
+  grid-column: 1;
+  margin: 0px 20px;
+}
+
+#top_nav {
+  margin: 20px 10px;
+  display: flex;
+  justify-content: space-between;
+}
+#top_nav a {
+  text-decoration: none;
+  color: black;
+}
+#top_nav a i {
+  padding-right: 5px;
+}
+
+#filter-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  box-shadow: 0 8px 6px -6px rgb(235, 235, 235);
+}
+
+.drop-menu {
+  text-align: center;
+  position: relative;
+}
+.drop-menu ul {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  padding-left: 0px;
+  text-align: center;
+  overflow-y: auto;
+  height: 300px;
+  margin: 0px;
+  width: 150px;
+}
+.drop-menu ul li {
+  display: flex;
+  color: black;
+  text-decoration: none;
+  height: 40px;
+  margin-bottom: 1px;
+}
+.drop-menu ul li label {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  position: relative;
+  font-size: 13px;
+  width: 100%;
+  height: 100%;
+  color: rgb(54, 54, 54);
+  border-bottom: 1px solid rgb(255, 255, 255);
+  border-top: 1px solid rgb(255, 255, 255);
+  background-color: #b1b1b1;
+}
+.drop-menu ul li input[type=checkbox] {
+  visibility: hidden;
+  width: 0px;
+  height: 0px;
+}
+.drop-menu:hover ul {
+  display: block;
+}
+
+#select-components {
+  display: flex;
+  gap: 10px;
+}
+
+.select-menu select {
+  border: none;
+  background-color: white;
+}
+
+#feed {
+  height: 800px;
+  overflow-y: auto;
+}
+
+article {
+  padding-bottom: 10px;
+  border-bottom: solid 1px rgb(214, 214, 214);
+  padding-top: 10px;
+  display: flex;
+}
+
+.article-side {
+  z-index: 1;
+}
+.article-side h2 {
+  margin: 0px 0px 5px 20px;
+  font-size: 1.8rem;
+  padding-right: 10px;
+}
+
+#images {
+  width: 200px;
+  height: 200px;
+  background-color: red;
+}
+
+.post-top {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 20px 0px 20px;
+  gap: 15px;
+}
+
+.sub-info {
+  margin-left: 20px;
+  display: flex;
+  gap: 20px;
+  margin-bottom: 5px;
+}
+.sub-info p {
+  margin: 0px;
+}
+
+.tags {
+  display: flex;
+  margin-left: 20px;
+  margin-bottom: 5px;
+}
+.tags p {
+  padding: 0px 10px 0px 0px;
+  margin: 0px;
+  display: block;
+}
+
+.post-content {
+  padding: 0px 20px;
+  margin: 0px;
+}
+
+.active {
+  background-color: grey;
+}
+
+.marker_label {
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  font-size: 12px !important;
+  color: black !important;
+  -webkit-text-stroke: 0.5px rgb(0, 0, 0) !important; /* width and color */
+}
+
+.leaflet-tooltip-top:before,
+.leaflet-tooltip-bottom:before,
+.leaflet-tooltip-left:before,
+.leaflet-tooltip-right:before {
+  border: none !important;
+}/*# sourceMappingURL=places.css.map */

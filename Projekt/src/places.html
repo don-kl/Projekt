@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/places.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+    integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+    crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+    integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+    crossorigin=""></script>
+
+</head>
+    <body>
+        <div id="container">
+            <div id="side">
+                <div id="top_nav">
+                        <a href="events.html"><i class="fa fa-newspaper-o"></i> Feed</a>
+                        <a href=""><i class="fa fa-map-marker"></i>Places</a>
+                        <a href=""><i class="fa fa-user-circle-o"></i>Profile</a>
+                </div>
+                <h1>Explore Aberdeen.</h1>
+                <div id="filter-nav">
+                    <div class="drop-menu"> Places
+                        <ul id="places_list">
+                        </ul>
+                    </div>
+                    <div class="drop-menu"> Tags
+                        <ul>
+                            <li>
+                                <label><input type="checkbox" id=""/>Chinese</label>
+                            </li>
+                            <li>
+                                <label><input type="checkbox" id=""/>Indian</label>
+                            </li>
+                            <li>
+                                <label><input type="checkbox" id=""/>Japanese</label>
+                            </li>
+                            <li>
+                                <label><input type="checkbox" id="">Italian</label>
+                            </li>
+                            <li>
+                                <label><input type="checkbox" id="">French</label>
+                            </li>
+                            <li>
+                                <label><input type="checkbox" id="">Hungarian</label>
+                            </li>
+                            <li>
+                                <label><input type="checkbox" id="">Turkish</label>
+                            </li>
+                            <li>
+                                <label><input type="checkbox" id="">Polish</label>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="select-components">
+                        <div class="select-menu">
+                            <label for="radius-select">Radius: </label>
+                            <select name="radius-select" id="radius-select">
+                                <option value="everywhere">Any</option>
+                                <option value="100-meter">100m</option>
+                                <option value="200-meter">200m</option>
+                                <option value="500-meter">500m</option>
+                                <option value="1-kilometer">1km</option>
+                                <option value="2-kilometer">2km</option>
+                                <option value="5-kilometer">5km</option>
+                            </select>
+                        </div>
+                        <div class="select-menu">
+                            <label for="hours-select">Hours:</label>
+                            <select name="hours-select" id="open">
+                                <option value="any">Any</option>
+                                <option value="any">Open</option>
+                                <option value="01:00">01:00</option>
+                                <option value="02:00">02:00</option>
+                                <option value="03:00">03:00</option>
+                                <option value="04:00">04:00</option>
+                                <option value="05:00">05:00</option>
+                                <option value="06:00">06:00</option>
+                                <option value="07:00">07:00</option>
+                                <option value="08:00">08:00</option>
+                                <option value="09:00">09:00</option>
+                                <option value="10:00">10:00</option>
+                                <option value="11:00">11:00</option>
+                                <option value="12:00">12:00</option>
+                                <option value="13:00">13:00</option>
+                                <option value="14:00">14:00</option>
+                                <option value="15:00">15:00</option>
+                                <option value="16:00">16:00</option>
+                                <option value="17:00">17:00</option>
+                                <option value="18:00">18:00</option>
+                                <option value="19:00">19:00</option>
+                                <option value="20:00">20:00</option>
+                                <option value="21:00">21:00</option>
+                                <option value="22:00">22:00</option>
+                                <option value="23:00">23:00</option>
+                                <option value="24:00">24:00</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div id="feed">
+                    <article class="Convenience Store" tabindex="0">
+                        <div>
+                            <div id="images"></div>
+                        </div>
+                        <div class="article-side">
+                            <h2>Spar</h2>
+                            <div class="sub-info">
+                                <p>80-84 Victoria Rd</p>
+                                <p>07:00 - 22:00</p>
+                            </div>
+                            <div class="tags">
+                                <p>groceries</p>
+                                <p>bakery</p>
+                                <p>alcohol</p>
+                                <p>sweets</p>
+                                <p>frozen</p>
+                            </div>
+                            <p class="post-content" >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sodales massa sed massa euismod, et pellentesque lorem pretium. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Ut rhoncus tristique erat nec sagittis</p>
+                        </div>
+                    </article>
+                    <article class="Pub" tabindex="0">
+                        <div>
+                            <div id="images"></div>
+                        </div>
+                        <div class="article-side">
+                            <h2>Grampian Bar</h2>
+                            <div class="sub-info">
+                                <p>23-25 Victoria Rd</p>
+                                <p>09:00 - 24:00</p>
+                            </div>
+                            <div class="tags">
+                                <p>Lager</p>
+                                <p>Music</p>
+                                <p>Whisky</p>
+                                <p>Gin</p>
+                                <p>JukeBox</p>
+                            </div>
+                            <p class="post-content" >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sodales massa sed massa euismod, et pellentesque lorem pretium. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Ut rhoncus tristique erat nec sagittis</p>
+                        </div>
+                    </article>
+                    <article class="Pharmacy" tabindex="0">
+                        <div>
+                            <div id="images"></div>
+                        </div>
+                        <div class="article-side">
+                            <h2>Dickies Pharmacy</h2>
+                            <div class="sub-info">
+                                <p id="adress">23-25 Victoria Rd</p>
+                                <p id="hours">09:00 - 24:00</p>
+                            </div>
+                            <div class="tags">
+                                <p>Prescriptions</p>
+                                <p>Supplements</p>
+                                <p>Cosmetics</p>
+                                <p>Advice</p>
+                            </div>
+                            <p class="post-content" >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sodales massa sed massa euismod, et pellentesque lorem pretium. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Ut rhoncus tristique erat nec sagittis</p>
+                        </div>
+                    </article>
+                    <article class="Restaurant" tabindex="0">
+                        <div>
+                            <div id="images"></div>
+                        </div>
+                        <div class="article-side">
+                            <h2>LaFiamma Pizza</h2>
+                            <div class="sub-info">
+                                <p>29 Victoria Rd</p>
+                                <p>09:00 - 24:00</p>
+                            </div>
+                            <div class="tags">
+                                <p>Calzoni</p>
+                                <p>Take-Away</p>
+                                <p>Sit-in</p>
+                                <p>Neapolitan</p>
+                                <p>Deserts</p>
+                            </div>
+                            <p class="post-content" >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sodales massa sed massa euismod, et pellentesque lorem pretium. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Ut rhoncus tristique erat nec sagittis</p>
+                        </div>
+                    </article>
+                    <article class="Convenience Store" tabindex="0">
+                        <div>
+                            <div id="images"></div>
+                        </div>
+                        <div class="article-side">
+                            <h2>Grampian Convenience</h2>
+                            <div class="sub-info">
+                                <p>11-13 Grampian Road</p>
+                                <p>07:00 - 22:00</p>
+                            </div>
+                            <div class="tags">
+                                <p>hot dogs</p>
+                                <p>polish beer</p>
+                                <p>alcohol</p>
+                                <p>sweets</p>
+                                <p>frozen</p>
+                            </div>
+                            <p class="post-content" >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sodales massa sed massa euismod, et pellentesque lorem pretium. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Ut rhoncus tristique erat nec sagittis</p>
+                        </div>
+                    </article>
+                    <article class="Bar" tabindex="0">
+                        <div>
+                            <div id="images"></div>
+                        </div>
+                        <div class="article-side">
+                            <h2>Victoria Bar</h2>
+                            <div class="sub-info">
+                                <p>23-25 Victoria Rd</p>
+                                <p>09:00 - 24:00</p>
+                            </div>
+                            <div class="tags">
+                                <p>Lager</p>
+                                <p>Music</p>
+                                <p>Whisky</p>
+                                <p>Gin</p>
+                                <p>Function Room</p>
+                            </div>
+                            <p class="post-content" >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sodales massa sed massa euismod, et pellentesque lorem pretium. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Ut rhoncus tristique erat nec sagittis</p>
+                        </div>
+                    </article>
+            </div>
+            </div>
+            <div id="map">
+            </div>
+        </div>
+    </body>
+<script src="places.js"></script>
+</html>

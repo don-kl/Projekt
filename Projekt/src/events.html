@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+    integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+    crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+    integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+    crossorigin=""></script>
+
+</head>
+    <body>
+        <div id="container">
+            <div id="side">
+                <div id="top_nav">
+                        <a href=""><i class="fa fa-newspaper-o"></i> Feed</a>
+                        <a href="places.html"><i class="fa fa-map-marker"></i>Places</a>
+                        <a href=""><i class="fa fa-user-circle-o"></i>Profile</a>
+                </div>
+                <div><h1>Choose your filters.</h1></div>
+                <nav id="feed_nav">
+                    <div id="feed_list">
+                    </div>
+                </nav>
+                <div id="date-nav">
+                    <di id="filter">
+                        <div class="drop-menu">Places
+                            <ul class="drop-center">
+                                <li id="search_bar"class="places">
+                                    <input type="text" placeholder="Search Places" id="search"/>
+                                    <button type="submit"><i class="fa fa-search"></i></button>
+                                </li>
+                                <li class="places">
+                                    <label><input type="checkbox" id="restaurant"/>Restaurant</label>
+                                </li>
+                                <li class="places">
+                                    <label><input type="checkbox" id="pub"/>Pub</label>
+                                </li>
+                                <li class="places">
+                                    <label><input type="checkbox" id="bar"/>Bar</label>
+                                </li>
+                                <li class="places">
+                                    <label><input type="checkbox" id="cofeeshop">Coffe Shop</label>
+                                </li>
+                                <li class="places">
+                                    <label><input type="checkbox" id="takeaway">Take-Away</label>
+                                </li>
+                                <li class="places">
+                                    <label><input type="checkbox" id="foodvan">Food Van</label>
+                                </li>
+                                <li class="places">
+                                    <label><input type="checkbox" id="nightclub">NightClub</label>
+                                </li>  
+                                <li class="places">
+                                    <label><input type="checkbox" id="conveniece">Convenience Store</label>
+                                </li> 
+                                <li class="places">
+                                    <label><input type="checkbox" id="supermarket">Supermarket</label>
+                                </li>       
+                                <li class="places">
+                                    <label><input type="checkbox" id="clothingshop">Clothing Shop</label>
+                                </li> 
+                                <li class="places">
+                                    <label><input type="checkbox" id="charity">Charity Shop</label>
+                                </li>  
+                                <li class="places">
+                                    <label><input type="checkbox" id="cosmetics">Cosmetics Shop</label>
+                                </li>    
+                                <li class="places">
+                                    <label><input type="checkbox" id="stationary">Stationary</label>
+                                </li>    
+                                <li class="places">
+                                    <label><input type="checkbox" id="worship">Place of Worship</label>
+                                </li>    
+                                <li class="places">
+                                    <label><input type="checkbox" id="Community">Community Centre</label>
+                                </li> 
+                                <li class="places">
+                                    <label><input type="checkbox" id="Sport">Sport</label>
+                                </li> 
+                                <li class="places">
+                                    <label><input type="checkbox" id="Museum">Museum</label></li> 
+                                <li class="places">
+                                    <label><input type="checkbox" id="Art">Art Gallery</label>
+                                </li> 
+                                <li class="places">
+                                    <label><input type="checkbox" id="Theater">Theater</label>
+                                </li> 
+                            </ul>
+                        </div>
+                        <div class="drop-menu">Events
+                            <ul class="drop-center">
+                                <li id="search_bar" class="places">
+                                    <input type="text" placeholder="Search Events" id="search"/>
+                                    <button type="submit"><i class="fa fa-search"></i></button>
+                                </li>
+                                <li class="places">
+                                    <label><input type="checkbox" id="updates"/>Updates</label>
+                                </li>
+                                <li class="places">
+                                    <label><input type="checkbox" id="live-music"/>Live Music</label>
+                                </li>
+                                <li class="places">
+                                    <label><input type="checkbox" id="bingo"/>Bingo</label>
+                                </li>
+                                <li class="places">
+                                    <label><input type="checkbox" id="quiz-night"/>Quiz Night</label>
+                                </li>
+                                <li class="places">
+                                    <label><input type="checkbox" id="support-meeting">Support Metting</label>
+                                </li>
+                                <li class="places">
+                                    <label><input type="checkbox" id="exhibition">Exhibition</label>
+                                </li>
+                                <li class="places">
+                                    <label><input type="checkbox" id="conference">Conference</label>
+                                </li>
+                                <li class="places">
+                                    <label><input type="checkbox" id="workshop">Workshop</label>
+                                </li>  
+                                <li class="places">
+                                    <label><input type="checkbox" id="class">Class</label>
+                                </li> 
+                                <li class="places">
+                                    <label><input type="checkbox" id="deals">Deals</label>
+                                </li>       
+                                <li class="places">
+                                    <label><input type="checkbox" id="offers">Offers</label>
+                                </li> 
+                                <li class="places">
+                                    <label><input type="checkbox" id="tasting">Tasting</label>
+                                </li> 
+                            </ul>
+                        </div>
+                    </di>
+                    <d id="choose-date">                    
+                        <p>Today</p>
+                        <p>This week</p>
+                        <p>Pick a date <i class="fa fa-calendar-o"></i></p>
+                    </d>
+                </div>
+                <div id="feed">
+                    <article class="bar live-music">
+                        <div class="post-top">
+                            <a href="" >Revolution</a>
+                            <time>20min</time>
+                        </div>
+                        <div class="post-content">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sodales massa sed massa euismod, et pellentesque lorem pretium. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Ut rhoncus tristique erat nec sagittis
+                        </div>
+                        <div class="post-bottom">
+                            <p>Like <i class="fa fa-thumbs-o-up"></i></p>
+                            <p>Comment <i class="fa fa-comment-o"></i></p>
+                        </div>
+                    </article>
+                    <article class="pub updates">
+                        <div class="post-top">
+                            <a href="" >Macamerons</a>
+                            <time>24min</time>
+                        </div>
+                        <div class="post-content">
+                            Please come to taste our wonderful lager from taps
+                            <img src="pint.jpg">
+                        </div>
+                        <div class="post-bottom">
+                            <p>Like <i class="fa fa-thumbs-o-up"></i></p>
+                            <p>Comment <i class="fa fa-comment-o"></i></p>
+                        </div>
+                    </article>
+                    <article class="restaurant offers">
+                        <div class="post-top">
+                            <a href="" >Madame Mews</a>
+                            <time>20min</time>
+                        </div>
+                        <div class="post-content">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sodales massa sed massa euismod, et pellentesque lorem pretium. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Ut rhoncus tristique erat nec sagittis
+                        </div>
+                        <div class="post-bottom">
+                            <p>Like <i class="fa fa-thumbs-o-up"></i></p>
+                            <p>Comment <i class="fa fa-comment-o"></i></p>
+                        </div>
+                    </article>
+                    <article class="pub live-music">
+                        <div class="post-top">
+                            <a href="" >Old School House</a>
+                            <time>24min</time>
+
+                        </div>
+                        <div class="post-content">
+                            Please come to taste our wonderful lager from taps
+                            <img src="pint.jpg">
+                        </div>
+                        <div class="post-bottom">
+                            <p>Like <i class="fa fa-thumbs-o-up"></i></p>
+                            <p>Comment <i class="fa fa-comment-o"></i></p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+            <div id="map">
+            </div>
+        </div>
+    </body>
+<script src="events.js"></script>
+</html>
